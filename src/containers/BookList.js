@@ -10,13 +10,13 @@ class BookList extends Component {
   render() {
     let output = this.props.books.map((book, index)=>{
       return(
-        <li
+        <li 
           key={book.id}
           onClick={() => this.props.selectBook(book)}
-          className="list-group-item">{book.title}</li>)
+          className="list-group-item btn btn-primary">{book.title}</li>)
     })
     return (
-      <ul className="list-group col-sm-4">
+      <ul className="list-group col-sm-4 button">
         {output}
       </ul>
     );
